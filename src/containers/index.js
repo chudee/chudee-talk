@@ -1,4 +1,4 @@
 import TabContainer from "./TabContainer";
-import GlobalNavigationContainer from "./GlobalNavigationContainer";
+import HeaderContainer from "./HeaderContainer";
 
-export { TabContainer, GlobalNavigationContainer };
+export { TabContainer, HeaderContainer };

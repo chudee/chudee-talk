@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import styled from "styled-components";
 import * as fa from "react-icons/lib/fa";
 
-const TabContainerWrapper = styled.ul`
+const TabContainerWrapper = styled.nav`
   width: 100%;
   height: 50px;
   display: flex;

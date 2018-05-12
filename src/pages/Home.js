@@ -2,9 +2,9 @@ import React, { Component } from "react";
 import styled from "styled-components";
 
 import { Wrapper } from "Components";
-import { TabContainer, GlobalNavigationContainer } from "Containers";
+import { TabContainer, HeaderContainer } from "Containers";
 
-const Content = styled.div`
+const Content = styled.section`
   width: 100%;
   height: 100%;
 `;
@@ -13,7 +13,7 @@ class Home extends Component {
   render() {
     return (
       <Wrapper>
-        <GlobalNavigationContainer />
+        <HeaderContainer />
         <TabContainer />
         <Content />
       </Wrapper>

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import styled from "styled-components";
 
-const GlobalNavigationContainerWrapper = styled.nav`
+const HeaderContainerWrapper = styled.header`
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -31,10 +31,10 @@ const SettingItem = styled.li`
   padding: 0 0.2rem;
 `;
 
-class GlobalNavigationContainer extends Component {
+class HeaderContainer extends Component {
   render() {
     return (
-      <GlobalNavigationContainerWrapper>
+      <HeaderContainerWrapper>
         <AppTitleWrapper>
           chudee<b>talk</b>
         </AppTitleWrapper>
@@ -43,9 +43,9 @@ class GlobalNavigationContainer extends Component {
           <SettingItem>ㅁ</SettingItem>
           <SettingItem>X</SettingItem>
         </Settings>
-      </GlobalNavigationContainerWrapper>
+      </HeaderContainerWrapper>
     );
   }
 }
 
-export default GlobalNavigationContainer;
+export default HeaderContainer;
