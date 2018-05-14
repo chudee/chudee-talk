@@ -1,4 +1,2 @@
-import TabContainer from "./TabContainer";
-import HeaderContainer from "./HeaderContainer";
-
-export { TabContainer, HeaderContainer };
+export { default as TabContainer } from "./TabContainer";
+export { default as HeaderContainer } from "./HeaderContainer";

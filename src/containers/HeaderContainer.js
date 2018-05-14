@@ -3,9 +3,10 @@ import styled from "styled-components";
 
 const HeaderContainerWrapper = styled.header`
   width: 100%;
+  min-height: 2rem;
   display: flex;
   justify-content: space-between;
-  background-color: darkslategray;
+  background-color: rgba(44, 62, 80, 1);
 `;
 
 const AppTitleWrapper = styled.span`

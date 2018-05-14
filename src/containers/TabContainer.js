@@ -1,18 +1,18 @@
 import React, { Component } from "react";
 import styled from "styled-components";
-import * as fa from "react-icons/lib/fa";
+import { MdPerson } from "react-icons/lib/md";
+import { IoChatbubble, IoAndroidMoreHorizontal } from "react-icons/lib/io";
+
+import Tap from "../components/Tab";
+import WithTab from "../components/WithTab";
 
 const TabContainerWrapper = styled.nav`
   width: 100%;
-  height: 50px;
+  min-height: 4rem;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  background-color: darkslategray;
-`;
-
-const TabWrapper = styled.li`
-  text-align: center;
+  background-color: rgba(44, 62, 80, 1);
 `;
 
 const Left = styled.ul`
@@ -27,39 +27,32 @@ const Right = styled.ul`
   align-items: center;
 `;
 
-const Tab = ({ name }) => {
-  return (
-    <TabWrapper>
-      {name}
-      <fa.FaArrowDown />
-    </TabWrapper>
-  );
-};
+const FriendTab = WithTab("/friends", <MdPerson size={50} color="inherit" />)(
+  Tap
+);
+
+const ChattingTab = WithTab(
+  "/chatting",
+  <IoChatbubble size={40} color="inherit" />
+)(Tap);
+
+const MoreTab = WithTab(
+  "/more",
+  <IoAndroidMoreHorizontal size={50} color="inherit" />
+)(Tap);
 
 class TabContainer extends Component {
-  state = {
-    tabs: [
-      { name: "test1" },
-      { name: "test2" },
-      { name: "test3" },
-      { name: "test4" }
-    ]
-  };
-
   render() {
-    const { tabs } = this.state;
-
     return (
       <TabContainerWrapper>
         <Left>
-          <Tab name={tabs[0].name} />
-          <Tab name={tabs[1].name} />
-          <Tab name={tabs[2].name} />
-          <Tab name={tabs[3].name} />
+          <FriendTab />
+          <ChattingTab />
+          <MoreTab />
         </Left>
         <Right>
-          <div>asdasd</div>
-          <div>asdasda</div>
+          <div style={{ color: "white", marginRight: 10 }}>Button1</div>
+          <div style={{ color: "white", marginRight: 10 }}>Button2</div>
         </Right>
       </TabContainerWrapper>
     );

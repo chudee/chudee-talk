@@ -1,6 +1,5 @@
 import styledNormalize from "styled-normalize";
 import { injectGlobal } from "styled-components";
-// import "./fonts.css";
 import Roboto from "assets/fonts/Roboto-Black.ttf";
 
 export default () => injectGlobal`

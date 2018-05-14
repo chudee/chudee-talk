@@ -1,7 +1,9 @@
 import React, { Component } from "react";
 import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
+import { hot } from "react-hot-loader";
 
 import { Home } from "./pages";
+import { Friends, Chatting, More } from "./templates";
 
 class App extends Component {
   state = {
@@ -18,8 +20,10 @@ class App extends Component {
     return (
       <BrowserRouter>
         <Switch>
-          <Route exact path="/" component={Home} />
-          <Route component={NoMatch} />
+          <Route path="/" component={Home} />
+          <Switch>
+            <Route component={NoMatch} />
+          </Switch>
         </Switch>
       </BrowserRouter>
     );
@@ -43,4 +47,4 @@ const NoMatch = ({ location }) => (
 //   />
 // );
 
-export default App;
+export default hot(module)(App);
