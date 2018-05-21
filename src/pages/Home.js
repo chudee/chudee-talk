@@ -10,26 +10,37 @@ import { Friends, Chatting, More } from "../templates";
 const Contents = styled.section`
   position: relative;
   width: 100%;
-  height: 100%;
+  height: calc(100% - 6.5rem);
 `;
 
 class Home extends Component {
   render() {
+    const { match } = this.props;
+
     return (
       <Wrapper>
         <HeaderContainer />
         <TabContainer />
         <Contents>
           <Switch>
-            <Route exact path="/" render={() => <Redirect to="/friends" />} />
-            <Route exact path="/friends" component={Friends} />
-            <Route exact path="/chatting" component={Chatting} />
-            <Route exact path="/more" component={More} />
+            <Redirect exact from="/" to="/friends" />
+            <Route path={`/friends`} component={Friends} />
+            <Route path={`/chatting`} component={Chatting} />
+            <Route path={`/more`} component={More} />
+            <Route component={NoMatch} />
           </Switch>
         </Contents>
       </Wrapper>
     );
   }
 }
+
+const NoMatch = ({ location }) => (
+  <div>
+    <h3>
+      No match for <code>{location.pathname}</code>
+    </h3>
+  </div>
+);
 
 export default Home;

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
+import { BrowserRouter, Route } from "react-router-dom";
 import { hot } from "react-hot-loader";
 
 import { Home } from "./pages";
@@ -19,24 +19,11 @@ class App extends Component {
   render() {
     return (
       <BrowserRouter>
-        <Switch>
-          <Route path="/" component={Home} />
-          <Switch>
-            <Route component={NoMatch} />
-          </Switch>
-        </Switch>
+        <Route path="/" component={Home} />
       </BrowserRouter>
     );
   }
 }
-
-const NoMatch = ({ location }) => (
-  <div>
-    <h3>
-      No match for <code>{location.pathname}</code>
-    </h3>
-  </div>
-);
 
 // const PrivateRoute = ({ component: Component, ...rest }) => (
 //   <Route

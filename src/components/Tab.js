@@ -1,26 +1,26 @@
 import React from "react";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 
 const TabWrapper = styled.li`
-  margin-left: 10px;
+  margin-left: 1rem;
   text-align: center;
+`;
+
+const StyledNavLink = styled(NavLink)`
+  color: rgba(255, 255, 255, 0.3);
+  &:hover {
+    color: rgba(255, 255, 255, 0.5);
+  }
+  &.active {
+    color: rgba(255, 255, 255, 1);
+  }
 `;
 
 const Tab = ({ url, icon }) => {
   return (
     <TabWrapper>
-      <NavLink
-        to={url}
-        activeStyle={{
-          color: "rgba(255, 255, 255, 1.0)"
-        }}
-        style={{
-          color: "rgba(87, 96, 111,1.0)"
-        }}
-      >
-        {icon}
-      </NavLink>
+      <StyledNavLink to={url}>{icon}</StyledNavLink>
     </TabWrapper>
   );
 };

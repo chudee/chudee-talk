@@ -1,18 +1,20 @@
 import React, { Component } from "react";
 import styled from "styled-components";
 
-const Test = styled.div`
-  position: absolute;
+import Search from "Components/Search";
+
+const FriendsWrapper = styled.div`
   width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  height: calc(100% - 3rem - 1px);
 `;
 
 class Friends extends Component {
   render() {
-    return <Test>friends</Test>;
+    return (
+      <FriendsWrapper>
+        <Search />
+      </FriendsWrapper>
+    );
   }
 }
 

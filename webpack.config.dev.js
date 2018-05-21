@@ -22,6 +22,7 @@ module.exports = {
   },
   devServer: {
     publicPath: "/",
+    historyApiFallback: true,
     contentBase: path.resolve(__dirname, "public"),
     compress: true,
     hot: true,
@@ -140,7 +141,7 @@ module.exports = {
           {
             loader: "file-loader",
             options: {
-              name: "./fonts/[name].[hash].[ext]"
+              name: "./assets/[name].[hash].[ext]"
             }
           }
         ]

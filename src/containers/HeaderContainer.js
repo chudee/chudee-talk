@@ -3,15 +3,15 @@ import styled from "styled-components";
 
 const HeaderContainerWrapper = styled.header`
   width: 100%;
-  min-height: 2rem;
+  height: 3rem;
   display: flex;
   justify-content: space-between;
-  background-color: rgba(44, 62, 80, 1);
+  background-color: rgba(0, 0, 0, 0.8);
 `;
 
 const AppTitleWrapper = styled.span`
   display: flex;
-  padding: 1rem 0.5rem;
+  padding: 1rem 1rem;
   justify-content: center;
   align-items: center;
   font-size: 1.1rem;
