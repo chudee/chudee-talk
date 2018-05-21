@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import styled from "styled-components";
 
-const Wrapper = styled.div`
+const HomeWrapper = styled.div`
   width: 375px;
   height: 667px;
   margin: auto;
@@ -10,4 +10,4 @@ const Wrapper = styled.div`
   border: 1px solid #000;
 `;
 
-export default Wrapper;
+export default HomeWrapper;

@@ -1,21 +1,9 @@
 import React, { Component } from "react";
 import styled from "styled-components";
 
-import FigureImage from "../components/FigureImage";
-import Search from "Components/Search";
+import FigureImage from "Components/FigureImage";
 
-const ChattingWrapper = styled.div`
-  width: 100%;
-  height: calc(100% - 3rem - 1px);
-`;
-
-const StyledChattingList = styled.ul`
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-`;
-
-const StyledChattingItem = styled.li`
+const ChattingItemWrapper = styled.li`
   display: flex;
   height: 80px;
   &:hover {
@@ -53,31 +41,15 @@ const StyledChattingItem = styled.li`
   }
 `;
 
-const ChattingList = () => {
-  return (
-    <StyledChattingList>
-      <ChattingItem />
-      <ChattingItem />
-      <ChattingItem />
-      <ChattingItem />
-      <ChattingItem />
-      <ChattingItem />
-      <ChattingItem />
-      <ChattingItem />
-      <ChattingItem />
-      <ChattingItem />
-      <ChattingItem />
-      <ChattingItem />
-      <ChattingItem />
-    </StyledChattingList>
-  );
-};
-
 const ChattingItem = () => {
   return (
-    <StyledChattingItem>
+    <ChattingItemWrapper>
       <div className="user">
-        <FigureImage url={require("assets/imgs/user.png")} />
+        <FigureImage
+          url={
+            "https://i1.wp.com/www.winhelponline.com/blog/wp-content/uploads/2017/12/user.png?fit=256%2C256&quality=100"
+          }
+        />
       </div>
       <ul className="room">
         <li className="header">
@@ -89,19 +61,8 @@ const ChattingItem = () => {
         </li>
         <li className="contents">끄아~~ㅁㄴㅇㅁㄴㅇㅁㄴㅇㄴㅁㅇㅁㄴㅇ</li>
       </ul>
-    </StyledChattingItem>
+    </ChattingItemWrapper>
   );
 };
 
-class Chatting extends Component {
-  render() {
-    return (
-      <ChattingWrapper>
-        <Search />
-        <ChattingList />
-      </ChattingWrapper>
-    );
-  }
-}
-
-export default Chatting;
+export default ChattingItem;

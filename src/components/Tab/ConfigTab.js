@@ -8,7 +8,7 @@ const TabWrapper = styled.li`
   border: ;
 `;
 
-const Test = styled.button`
+const StyledButton = styled.button`
   border-radius: 100%;
   border: 1px solid rgba(0, 0, 0, 0.5);
   background-color: transparent;
@@ -30,7 +30,7 @@ const Test = styled.button`
 const ConfigTab = ({ url, icon }) => {
   return (
     <TabWrapper>
-      <Test>{icon}</Test>
+      <StyledButton>{icon}</StyledButton>
     </TabWrapper>
   );
 };

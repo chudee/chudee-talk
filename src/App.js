@@ -3,7 +3,6 @@ import { BrowserRouter, Route } from "react-router-dom";
 import { hot } from "react-hot-loader";
 
 import { Home } from "./pages";
-import { Friends, Chatting, More } from "./templates";
 
 class App extends Component {
   state = {

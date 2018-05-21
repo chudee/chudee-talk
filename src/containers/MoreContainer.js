@@ -10,10 +10,10 @@ const Test = styled.div`
   align-items: center;
 `;
 
-class More extends Component {
+class MoreContainer extends Component {
   render() {
     return <Test>more</Test>;
   }
 }
 
-export default More;
+export default MoreContainer;

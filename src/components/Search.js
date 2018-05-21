@@ -24,14 +24,24 @@ const SearchWarpper = styled.div`
 
 class Search extends Component {
   render() {
+    const { placeholder, isMore } = this.props;
     return (
       <SearchWarpper>
-        <FaSearch size={30} style={{ margin: "1rem", color: "#999" }} />
-        <StyledInput type="text" placeholder="채팅방 이름, 참여자 검색" />
-        <IoAndroidMoreVertical
-          size={30}
-          style={{ margin: "1rem", color: "#999" }}
+        <FaSearch
+          size={20}
+          style={{ margin: "auto", color: "#999", flexBasis: "3rem" }}
         />
+        <StyledInput
+          type="text"
+          placeholder={placeholder}
+          style={{ flex: 1, fontSize: "0.9rem" }}
+        />
+        {isMore && (
+          <IoAndroidMoreVertical
+            size={25}
+            style={{ margin: "auto", color: "#999", flexBasis: "2rem" }}
+          />
+        )}
       </SearchWarpper>
     );
   }

@@ -1,36 +1,33 @@
 import React, { Component } from "react";
-import styled from "styled-components";
-
-import { Wrapper } from "Components";
 import { Route, Switch, Redirect } from "react-router-dom";
-import { TabContainer, HeaderContainer } from "Containers";
 
-import { Friends, Chatting, More } from "../templates";
-
-const Contents = styled.section`
-  position: relative;
-  width: 100%;
-  height: calc(100% - 6.5rem);
-`;
+import {
+  TabContainer,
+  HeaderContainer,
+  ChattingContainer,
+  FriendsContainer,
+  MoreContainer
+} from "Containers";
+import { HomeWrapper, ContentsWrapper } from "Components/Wrapper";
 
 class Home extends Component {
   render() {
     const { match } = this.props;
 
     return (
-      <Wrapper>
+      <HomeWrapper>
         <HeaderContainer />
         <TabContainer />
-        <Contents>
+        <ContentsWrapper>
           <Switch>
             <Redirect exact from="/" to="/friends" />
-            <Route path={`/friends`} component={Friends} />
-            <Route path={`/chatting`} component={Chatting} />
-            <Route path={`/more`} component={More} />
+            <Route path={`/friends`} component={FriendsContainer} />
+            <Route path={`/chatting`} component={ChattingContainer} />
+            <Route path={`/more`} component={MoreContainer} />
             <Route component={NoMatch} />
           </Switch>
-        </Contents>
-      </Wrapper>
+        </ContentsWrapper>
+      </HomeWrapper>
     );
   }
 }

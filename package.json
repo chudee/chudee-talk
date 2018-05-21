@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "start": "cross-env NODE_PATH=src webpack-dev-server --hot --config webpack.config.dev.js --open",
-    "build": "webpack --config webpack.config.prod.js"
+    "build": "webpack --config webpack.config.prod.js",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "repository": "git+https://github.com/chudee/chudee-talk.git",
   "author": "chudee",
@@ -37,7 +39,11 @@
     "uglifyjs-webpack-plugin": "^1.2.4",
     "webpack": "^3.10.0",
     "webpack-bundle-analyzer": "^2.11.1",
-    "webpack-dev-server": "^2.10.0"
+    "webpack-dev-server": "^2.10.0",
+    "@storybook/react": "^3.4.5",
+    "@storybook/addon-actions": "^3.4.5",
+    "@storybook/addon-links": "^3.4.5",
+    "@storybook/addons": "^3.4.5"
   },
   "dependencies": {
     "@types/react": "^16.0.40",
