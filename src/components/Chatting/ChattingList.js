@@ -2,16 +2,11 @@ import React, { Component } from "react";
 import styled from "styled-components";
 
 import { ChattingItem } from "Components/Chatting";
-
-const ChattingListWrapper = styled.ul`
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-`;
+import { ListGroup } from "Components";
 
 const ChattingList = () => {
   return (
-    <ChattingListWrapper>
+    <ListGroup>
       <ChattingItem />
       <ChattingItem />
       <ChattingItem />
@@ -25,7 +20,7 @@ const ChattingList = () => {
       <ChattingItem />
       <ChattingItem />
       <ChattingItem />
-    </ChattingListWrapper>
+    </ListGroup>
   );
 };
 

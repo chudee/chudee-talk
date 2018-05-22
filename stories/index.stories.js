@@ -1,12 +1,11 @@
 import React from "react";
-
 import { storiesOf } from "@storybook/react";
 import { action } from "@storybook/addon-actions";
-// import { linkTo } from "@storybook/addon-links";
-// import { Button, Welcome } from "@storybook/react/demo";
 
-import { Search, FigureImage } from "Components";
+import { Search, FigureImage, Badge } from "Components";
 import { ChattingList, ChattingItem } from "Components/Chatting";
+import { UserList, UserItem } from "Components/User";
+import { MoreList, MoreItem, MoreProfile } from "Components/More";
 import {
   FriendTab,
   ChattingTab,
@@ -15,9 +14,7 @@ import {
   MenuTab
 } from "Components/Tab/Tabs";
 
-// storiesOf("Welcome", module).add("to Storybook", () => (
-//   <Welcome showApp={linkTo("Button")} />
-// ));
+import Dummy from "../src/Dummy";
 
 storiesOf("Components", module)
   .add("FigureImage", () => (
@@ -27,32 +24,23 @@ storiesOf("Components", module)
       }
     />
   ))
-  .add("ChattingList", () => <ChattingList />)
-  .add("ChattingItem", () => <ChattingItem />)
   .add("Search", () => (
     <div>
       <Search placeholder="이름 검색" isMore={false} />
       <Search placeholder="채팅방 이름, 참여자 검색" isMore={true} />
     </div>
   ))
-  .add("Tabs", () => <FriendTab />);
-//   <div>
+  .add("Badge", () => <Badge pill primary text="20" />);
 
-//     <ChattingTab />
-//     <MoreTab />
-//     <NotificationTab />
-//     <MenuTab />
-//   </div>
-// ));
+storiesOf("User", module)
+  .add("UserList", () => <UserList />)
+  .add("UserItem", () => <UserItem />); // Todo: Group 작업
 
-// storiesOf("Button", module)
-//   .add("with text", () => (
-//     <Button onClick={action("clicked")}>Hello Button</Button>
-//   ))
-//   .add("with some emoji", () => (
-//     <Button onClick={action("clicked")}>
-//       <span role="img" aria-label="so cool">
-//         😀 😎 👍 💯
-//       </span>
-//     </Button>
-//   ));
+storiesOf("Chatting", module)
+  .add("ChattingList", () => <ChattingList />)
+  .add("ChattingItem", () => <ChattingItem />);
+
+storiesOf("More", module)
+  .add("MoreProfile", () => <MoreProfile />)
+  .add("MoreList", () => <MoreList list={Dummy.moreList} />)
+  .add("MoreItem", () => <MoreItem item={{ title: "내 스토리" }} />); // Todo: Icon 넣는 작업

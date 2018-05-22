@@ -2,8 +2,8 @@ import React from "react";
 import styled from "styled-components";
 
 const StyledImage = styled.div`
-  width: 50px;
-  height: 50px;
+  width: ${p => (p.size ? p.size : "40px")};
+  height: ${p => (p.size ? p.size : "40px")};
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -15,9 +15,8 @@ const StyledImage = styled.div`
   border: 1px solid #ddd;
 `;
 
-const FigureImage = ({ url }) => {
-  console.log(url);
-  return <StyledImage style={{ backgroundImage: `url(${url})` }} />;
+const FigureImage = ({ url, size }) => {
+  return <StyledImage size={size} style={{ backgroundImage: `url(${url})` }} />;
 };
 
 export default FigureImage;

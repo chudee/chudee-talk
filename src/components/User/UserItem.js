@@ -1,13 +1,6 @@
 import React from "react";
 
-import {
-  ListGroupItem,
-  FigureImage,
-  Badge,
-  Time,
-  Title,
-  Text
-} from "Components";
+import { ListGroupItem, FigureImage, StatusMessage, Title } from "Components";
 import {
   FigureImageWrapper,
   ListGroupItemBody,
@@ -15,9 +8,9 @@ import {
   ListGroupItemBodyRow
 } from "Components/Wrapper";
 
-const ChattingItem = () => {
+const UserItem = () => {
   return (
-    <ListGroupItem height="80px" active={true}>
+    <ListGroupItem height="60px" active={true}>
       <FigureImageWrapper width="80px">
         <FigureImage
           size="45px"
@@ -27,19 +20,13 @@ const ChattingItem = () => {
         />
       </FigureImageWrapper>
       <ListGroupItemBody>
-        {/* <ListGroupItemBodyCol col="1"> */}
         <ListGroupItemBodyRow>
           <Title />
-          <Time />
+          <StatusMessage />
         </ListGroupItemBodyRow>
-        <ListGroupItemBodyRow>
-          <Text />
-          <Badge pill primary text="1" />
-        </ListGroupItemBodyRow>
-        {/* </ListGroupItemBodyCol> */}
       </ListGroupItemBody>
     </ListGroupItem>
   );
 };
 
-export default ChattingItem;
+export default UserItem;

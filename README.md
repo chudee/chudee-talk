@@ -11,4 +11,7 @@
 
   // webpack-dev-server
   yarn start
+
+  // storybook
+  yarn storybook // localhost:6006 접속
 ```

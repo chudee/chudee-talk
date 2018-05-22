@@ -4,6 +4,7 @@ const ContentsWrapper = styled.section`
   position: relative;
   width: 100%;
   height: calc(100% - 6.5rem);
+  overflow: hidden;
 `;
 
 export default ContentsWrapper;
