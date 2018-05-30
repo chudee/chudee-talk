@@ -10,18 +10,19 @@ import { IoChatbubbles, IoAndroidMoreHorizontal } from "react-icons/lib/io";
 import { Tab, ConfigTab } from "Components/Tab";
 import { WithTab } from "Components/HOC";
 
-const FriendTab = WithTab(<MdPerson size={40} color="inherit" />, "/friends")(
-  Tab
-);
+const FriendTab = WithTab(
+  <MdPerson size={40} color="inherit" />,
+  "/home/friends"
+)(Tab);
 
 const ChattingTab = WithTab(
   <IoChatbubbles size={35} color="inherit" />,
-  "/chatting"
+  "/home/chatting"
 )(Tab);
 
 const MoreTab = WithTab(
   <IoAndroidMoreHorizontal size={40} color="inherit" />,
-  "/more"
+  "/home/more"
 )(Tab);
 
 const NotificationTab = WithTab(<MdNotifications size={20} />)(ConfigTab);

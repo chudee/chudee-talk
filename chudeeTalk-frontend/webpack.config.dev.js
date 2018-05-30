@@ -26,12 +26,12 @@ module.exports = {
     contentBase: path.resolve(__dirname, "public"),
     compress: true,
     hot: true,
-    open: true
+    open: true,
+    // proxy: {
+    //   "**": "http://localhost:3000" // express 서버주소
+    // }
   },
   plugins: [
-    // new webpack.DefinePlugin({
-    //   'process.env.NODE_ENV': JSON.stringify('development'),
-    // }),
     new HtmlWebpackPlugin({
       template: "./public/index.html"
     }),

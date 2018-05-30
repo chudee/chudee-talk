@@ -1,5 +1,5 @@
 {
-  "name": "chudee-talk",
+  "name": "chudee-talk-frontend",
   "version": "0.1.0",
   "description": "",
   "main": "index.js",
@@ -13,6 +13,10 @@
   "author": "chudee",
   "license": "ISC",
   "devDependencies": {
+    "@storybook/addon-actions": "^3.4.5",
+    "@storybook/addon-links": "^3.4.5",
+    "@storybook/addons": "^3.4.5",
+    "@storybook/react": "^3.4.5",
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
     "babel-polyfill": "^6.26.0",
@@ -39,11 +43,7 @@
     "uglifyjs-webpack-plugin": "^1.2.4",
     "webpack": "^3.10.0",
     "webpack-bundle-analyzer": "^2.11.1",
-    "webpack-dev-server": "^2.10.0",
-    "@storybook/react": "^3.4.5",
-    "@storybook/addon-actions": "^3.4.5",
-    "@storybook/addon-links": "^3.4.5",
-    "@storybook/addons": "^3.4.5"
+    "webpack-dev-server": "^2.10.0"
   },
   "dependencies": {
     "@types/react": "^16.0.40",
@@ -55,7 +55,11 @@
     "react-dom": "^16.2.0",
     "react-icons": "^2.2.7",
     "react-motion": "^0.5.2",
+    "react-redux": "^5.0.7",
     "react-router-dom": "^4.2.2",
+    "redux": "^4.0.0",
+    "redux-thunk": "^2.2.0",
+    "socket.io-client": "^2.1.1",
     "styled-components": "^3.2.6",
     "styled-normalize": "^4.0.0",
     "url-loader": "^1.0.1"

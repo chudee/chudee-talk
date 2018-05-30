@@ -13,17 +13,19 @@ import { HomeWrapper, ContentsWrapper } from "Components/Wrapper";
 class Home extends Component {
   render() {
     const { match } = this.props;
-
     return (
       <HomeWrapper>
         <HeaderContainer />
         <TabContainer />
         <ContentsWrapper>
           <Switch>
-            <Redirect exact from="/" to="/friends" />
-            <Route path={`/friends`} component={FriendsContainer} />
-            <Route path={`/chatting`} component={ChattingContainer} />
-            <Route path={`/more`} component={MoreContainer} />
+            <Route path={`${match.url}/friends`} component={FriendsContainer} />
+            <Route
+              path={`${match.url}/chatting`}
+              component={ChattingContainer}
+            />
+            <Route path={`${match.url}/more`} component={MoreContainer} />
+            <Redirect exact from={`${match.url}`} to={`${match.url}/friends`} />
             <Route component={NoMatch} />
           </Switch>
         </ContentsWrapper>
